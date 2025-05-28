@@ -10,5 +10,24 @@
 }
 
 .titulo2{
-    border: 1px solid #FF0000;
+    border: 3px double #FF0000;
+}
+
+.cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+    button{
+        box-shadow: 0 0 15px rgb(0, 0, 0, 0.5);
+        margin: 10px;
+        height: 40px;
+        width: 40px;
+        border-radius: 100%;
+        border: none;
+        text-align: center;
+        background: #f0f0f0;
+        font-size: 25px;
+    }
 }
