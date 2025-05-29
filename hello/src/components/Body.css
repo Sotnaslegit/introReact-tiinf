@@ -1,33 +1,46 @@
 .Body{
-    background: #ffbb00;
-    height: calc(100vh - 70px);
-
+    background: #333;
     text-align: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
-.titulo2{
-    border: 3px double #FF0000;
+.grid{
+    width: 92.5vw;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
 
-.cont{
+.card{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.03s;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.no_image{
+    width: 100%;
+    height: 200px;
+    background: #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    color: #555;
+}
 
-    button{
-        box-shadow: 0 0 15px rgb(0, 0, 0, 0.5);
-        margin: 10px;
-        height: 40px;
-        width: 40px;
-        border-radius: 100%;
-        border: none;
-        text-align: center;
-        background: #f0f0f0;
-        font-size: 25px;
-    }
+.card h2, .card p {
+    color: #555;
 }
