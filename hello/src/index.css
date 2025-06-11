@@ -5,5 +5,7 @@
 }
 
 #root, body, html{
-  min-height: 100vhb;
+  height: 100vh;
+  background: #333;
+
 }

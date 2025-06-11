@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react'
 
 function App() {
 
+  const [searchTerm,setSearchTerm] = useState('')
+
   const [characters, setCharacters] = useState([])
     useEffect(() => {
         fetch('https://hp-api.onrender.com/api/characters')
@@ -13,12 +15,16 @@ function App() {
         .catch((err) => console.log('Erro na API:', err))
     },[])
 
-  return (
-    <>
-      <Header />
-      <Body characters={characters} />
+    const filtredCharacters = characters.filter((char)=>
+      char.name.toLowerCase().includes(searchTerm.toLowerCase())
+  )
 
-    </>
+  return (
+    <div className='App'>
+      <Header searchTerm = {searchTerm} setSearchTerm = {setSearchTerm}/>
+      <Body characters={filtredCharacters} />
+
+    </div>
   )
 }
 
