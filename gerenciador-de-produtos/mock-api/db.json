@@ -1,14 +1,3 @@
 {
-    "products":[
-        {
-            "id":1,
-            "name":"Produto A",
-            "price":10.99
-        },
-        {
-            "id":2,
-            "name":"Produto B",
-            "price":25.00
-        }
-    ]
+  "products": []
 }
